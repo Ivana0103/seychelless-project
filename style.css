@@ -1,0 +1,1226 @@
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --color-primary: #8C5D5D;
+    --color-secondary: #F2E9D8;
+    --color-accent: #262401;
+    --color-dark: #555C73;
+}
+body {
+    margin: 0;
+    color: var(--color-dark);
+    background-color: var(--color-secondary);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+
+.header {
+   position: relative;
+   height: 600px;
+   font-size: 2.5rem;
+   background: url(images/background1.jpg) no-repeat center
+   center/cover ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   text-align: center;
+}
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    margin: 0;
+}
+.intro {
+    padding: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    text-align: center;
+}
+.intro h2 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+.intro p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.why-visit , .ready-to-discover {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+.why-visit p , .ready-to-discover p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-accent);
+ 
+}
+.card {
+    position: relative;
+    border: 2px solid var(--color-accent);
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 1s ease, border-radius 1s ease;
+    border-radius: 0;
+}
+.card:hover img {
+    transform: scale(1.2);
+    border-radius: 20px;
+}
+.card h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 5px;                               
+    font-size: 1.5rem;
+    z-index: 1;
+    padding: 10px;
+    white-space: nowrap;
+    transition:  transform 1s ease;
+}
+.card:hover h2 {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+/* FOOTER FOR ALL PAGES */
+.footer {
+    background: linear-gradient(to right, #0a4f59, #027a8e); /* Gradient efekat */
+    color: white; 
+    padding: 60px 20px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative; 
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-accent);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer nav ul li a:hover {
+   color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+/* ABOUT PAGE */
+.header-about {
+    position: relative;
+    height: 600px;
+    background: url(images/turtle.jpg) no-repeat center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.header-about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.header-content-about {
+    position: relative;
+    z-index: 2;
+}
+.header-about h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.main-about {
+    padding: 2rem;
+}
+.intro-about {
+    margin-bottom: 2rem;
+}
+.intro-about h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.intro-about p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.geography, .biodiversity, .activities {
+    margin-bottom: 2rem;
+}
+.geography h3, .biodiversity h3, .activities h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.geography p, .biodiversity p, .activities p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.activities ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.activities ul li {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+.img-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem ;
+    flex-direction: row;
+    gap: 20px;
+}
+.img-about img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.4);
+}
+.img-about .text {
+    flex: 1;
+}
+.geography .img-about {
+    flex-direction: row; 
+}
+
+.biodiversity .img-about {
+    flex-direction: row-reverse; 
+}
+
+.activities .img-about {
+    flex-direction: row;
+ }
+
+.conservation h3 {
+    font-size: 2.5rem;
+    color: #8C5D5D;
+    margin-bottom: 1rem;
+}
+
+.conservation p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+/*COCO DE MER PAGE */
+.header-coco {
+    position: relative;
+    height: 600px;
+    background: url(images/cocodemer.jpg) no-repeat center center;
+    background-size: cover; 
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+.header-coco::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.4);
+z-index: 1;
+}
+.header-content-coco {
+    position: relative;
+    z-index: 2;
+}
+.header-coco h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.main-coco {
+    padding: 2rem;
+}
+.intro-coco {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.intro-coco h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.intro-coco p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.features-coco h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    
+}
+.features-coco p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.img-coco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.img-coco img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.4);
+}
+.img-coco .text {
+    flex: 1;
+}
+.img-coco h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+.img-coco p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.conservation-coco h3 {
+    font-size: 2.5rem;
+    color: #8C5D5D;
+    margin-bottom: 1rem;
+}
+.conservation-coco p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+/* TASTE OF SEYCHELLES PAGE */
+
+.header-taste {
+    position: relative;
+    height: 600px;
+    background: url('images/taste-header.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    z-index: 2;
+}
+.header-taste::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-content-taste h1 {
+    font-size: 3rem;
+    position: relative;
+    z-index: 3;
+}
+
+.main-taste {
+    padding: 3rem 5%;
+}
+
+.intro-taste {
+    margin-bottom: 2rem;
+}
+
+.intro-taste h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.intro-taste p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.local-delights {
+    margin-top: 3rem;
+}
+
+.local-delights h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.local-delights .img-text-taste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.local-delights .img-text-taste img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.local-delights .img-text-taste .text-taste {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.local-delights .img-text-taste .text-taste p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.national-drink {
+    margin-top: 3rem;
+}
+
+.national-drink h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.national-drink .img-text-taste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.national-drink .img-text-taste img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.national-drink .img-text-taste .text-taste {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.national-drink .img-text-taste .text-taste p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.spices {
+    margin-top: 3rem;
+}
+
+.spices h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.spices .img-text-taste {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.spices .img-text-taste img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.spices .img-text-taste .text-taste {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.spices .img-text-taste .text-taste p, .spices .img-text-taste .text-taste ul {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.spices .img-text-taste .text-taste ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.spices .img-text-taste .text-taste ul li {
+    margin-bottom: 1rem;
+}
+
+.spices .img-text-taste .text-taste ul li strong {
+    font-weight: bold;
+}
+/* Specific styling for images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* DISCOVER CULTURE PAGE */
+
+.header-culture {
+    position: relative;
+    height: 600px;
+    background: url('images/culture-header.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    z-index: 2;
+}
+.header-culture::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-content-culture h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 3;
+}
+.main-culture {
+    padding: 40px;
+}
+
+.img-text-culture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.text-culture {
+    flex: 1 1 50%;
+    padding: 20px;
+    order: 1;
+}
+
+.img-text-culture img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    order: 2;
+}
+
+.text-culture p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+h3, .text-culture h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.text-culture ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.local-festivals, .music-and-dance, .local-crafts {
+    margin-bottom: 40px;
+}
+
+.local-festivals img, .music-and-dance img, .local-crafts img {
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+.local-festivals .text-culture, .music-and-dance .text-culture, .local-crafts .text-culture {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.local-festivals .text-culture, .music-and-dance .text-culture, .local-crafts .text-culture {
+    padding: 20px;
+}
+
+.local-festivals h3, .music-and-dance h3, .local-crafts h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* BEACHES PAGE */
+
+.header-beaches {
+    position: relative;
+    height: 600px;
+    background: url('images/beach-header.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    z-index: 2;
+}
+.header-beaches::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.header-content-beaches h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 3;
+}
+
+.main-beaches {
+    padding: 40px;
+}
+
+.two-images-top {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.two-images-top img {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+.text-beaches {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.text-beaches h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+.text-beaches p {
+    font-size: 2rem;
+    line-height: 1.6;
+}
+.text-beaches ul {
+    font-size: 1.6rem;
+    text-align: start;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.two-images-bottom {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.two-images-bottom img {
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+/* TRAVEL TIPS PAGE */
+
+.header-tips {
+    position: relative;
+    height: 600px;
+    background: url('images/travel-header.jpg') no-repeat center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-tips::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-content-tips {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.header-tips h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.main-tips {
+    padding: 2rem;
+}
+
+.intro-tips h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.intro-tips p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.tips-section {
+    margin-bottom: 2rem;
+}
+
+.tips-section h3 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.tips-section p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.img-tips {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.img-tips img {
+    width: 45%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.img-tips .text {
+    width: 45%;
+    padding-left: 20px;
+}
+
+.img-tips .text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.tips-section-reverse .img-tips {
+    display: flex;
+    flex-direction: row-reverse;  
+    justify-content: center;      
+    align-items: center;        
+    gap: 20px;                 
+}
+
+.tips-section-reverse .img-tips .text {
+    width: 50%;                 
+    text-align: left;            
+    padding-right: 20px;         
+    padding-left: 0;             
+}
+
+.tips-section-reverse .img-tips img {
+    width: 45%;                  
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 6px 6px 30px 2px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .header, .header-about, .header-coco, .header-taste,
+    .header-culture, .header-beaches, .header-tips {
+        height: 600px;
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        height: 400px;
+        font-size: 1.8rem;
+    }
+
+    .intro {
+        padding: 1rem;
+    }
+
+    .intro h2 {
+        font-size: 1.6rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .why-visit p,
+    .ready-to-discover p {
+        font-size: 1.2rem;
+    }
+    .header-about h1 {
+        font-size: 2.2rem;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-about h2, .gallery h3, .conservation h3, .geography h3, .biodiversity h3, .activities h3 {
+        font-size: 2rem;
+    }
+    .intro-about p, .conservation p, .geography p, .biodiversity p, .activities p {
+        font-size: 1.2rem; 
+    }
+    .img-about {
+      flex-direction: column;
+      text-align: center;
+    }
+    img.about img {
+        max-width: 100%;
+    }
+    .img-about .text {
+        text-align: center; 
+    }
+    .geography .img-about, 
+    .biodiversity .img-about, 
+    .activities .img-about {
+        flex-direction: row;  
+    }
+    .activities ul li {
+        font-size: 1.2rem;
+    }
+    .img-about {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .img-about img {
+        max-width: 100%; 
+    }
+
+    .geography .img-about {
+        flex-direction: column; 
+    }
+
+    .biodiversity .img-about {
+        flex-direction: column; 
+    }
+
+    .activities .img-about {
+        flex-direction: column; 
+    }
+    .header-coco h1 {
+        font-size: 2.2rem;
+    }
+
+    .img-coco {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-coco img {
+        max-width: 100%;
+    }
+
+    .img-coco .text {
+        text-align: center;
+    }
+
+    .conservation-coco p {
+        font-size: 1.2rem;
+    }
+    .header-content-taste h1 {
+        font-size: 2.2rem;
+    }
+
+    .intro-taste h2, .local-delights h3, .national-drink h3, .spices h3 {
+        font-size: 2.5rem;
+    }
+
+    .intro-taste p, .local-delights .img-text-taste .text-taste p, .national-drink .img-text-taste .text-taste p, .spices .img-text-taste .text-taste p {
+        font-size: 2rem;
+    }
+
+    .img-text-taste {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .img-text-taste img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-text-taste .text-taste {
+        padding-left: 0;
+    }
+    .header-content-culture h1 {
+        font-size: 2.2rem;
+    }
+
+    .img-text-culture {
+        flex-direction: column;
+    }
+
+    .img-text-culture img {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .text-culture {
+        order: 2;
+    }
+
+    .text-culture p {
+        font-size: 1.2rem;
+    }
+
+    h3, .text-culture h2 {
+        font-size: 2rem;
+    }
+    .header-content-beaches h1 {
+        font-size: 2.2rem;
+    }
+
+    .two-images-top, .two-images-bottom {
+        flex-direction: column;
+    }
+
+    .two-images-top img, .two-images-bottom img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-beaches p {
+        font-size: 1.2rem;
+    }
+
+    .text-beaches h2 {
+        font-size: 2rem;
+    }
+    .header-tips h1 {
+        font-size: 2.5rem;
+    }
+    .tips-section .img-tips img {
+        width: 100%;  
+        margin-bottom: 15px; 
+    }
+
+    .tips-section-reverse .img-tips {
+        flex-direction: column;    
+        align-items: center;       
+        justify-content: center;   
+    }
+    .tips-section .img-tips {
+        flex-direction: column;    
+        align-items: center;       
+        justify-content: center;   
+    }
+    .tips-section .img-tips .text {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .tips-section-reverse .img-tips .text {
+        width: 100%;                 
+        padding: 10px;              
+        text-align: center;         
+    }
+
+    .tips-section-reverse .img-tips img {
+        width: 100%;               
+        margin-bottom: 15px;        
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 350px;
+        font-size: 1.5rem;
+    }
+
+    .intro h2 {
+        font-size: 1.4rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card h2 {
+        font-size: 1rem;
+    }
+
+    .why-visit p,
+    .ready-to-discover p {
+        font-size: 1rem;
+    }
+    .header-about {
+        height: 300px;
+    }
+
+    .header-about h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-about h2, .conservation h3, .geography h3, .biodiversity h3, .activities h3 {
+        font-size: 2rem; 
+    }
+
+    .intro-about p, .conservation p, .geography p, .biodiversity p, .activities p {
+        font-size: 1.2rem; 
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    .img-about {
+        flex-wrap: wrap;  
+        justify-content: center; 
+        text-align: center; 
+    }
+    .header-coco {
+        height: 300px;
+    }
+
+    .header-coco h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-coco h2, .features-coco h3, .conservation-coco h3 {
+        font-size: 2rem;
+    }
+
+    .intro-coco p, .features-coco p, .conservation-coco p {
+        font-size: 1.2rem;
+    }
+
+    .footer-coco {
+        height: 150px;
+    }
+    .header-taste {
+        height: 300px;
+    }
+
+    .header-content-taste h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-taste h2, .local-delights h3, .national-drink h3, .spices h3 {
+        font-size: 1.8rem;
+    }
+
+    .intro-taste p, .local-delights .img-text-taste .text-taste p, .national-drink .img-text-taste .text-taste p, .spices .img-text-taste .text-taste p {
+        font-size: 1.1rem;
+    }
+    .img-text-taste {
+        width: 100%;
+    }
+    .header-culture {
+        height: 300px;
+    }
+    .header-content-beaches h1 {
+        font-size: 1.8rem;
+    }
+    .header-beaches {
+        height: 300px;
+    }
+    .header-tips h1 {
+        font-size: 2rem;
+    }
+    .header-tips  {
+        height: 300px;
+    }
+    .tips-section .img-tips img {
+        width: 100%;                
+        margin-bottom: 20px;        
+    }
+
+    .tips-section-reverse .img-tips .text {
+        width: 100%;              
+        padding: 0 10px;           
+        text-align: center;       
+    }
+
+    .tips-section-reverse .img-tips img {
+        width: 100%;                
+        margin-bottom: 20px;        
+    }
+}
+/* RESPOSIVE FOOTER */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    footer nav ul {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    footer nav ul li a {
+        font-size: 14px; 
+        line-height: 1.4; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 30px 10px; 
+        text-align: left;
+    }
+
+    footer nav ul {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+    }
+
+    footer nav ul li a {
+        font-size: 13px; 
+        font-weight: 500; 
+    }
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0; /* Početno skriveno */
+    visibility: hidden; /* Početno skriveno */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Glatka animacija */
+}
+
+

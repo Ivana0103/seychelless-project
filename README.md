@@ -1,30 +1,24 @@
-##Project Overview
-This project utilizes a combination of modern web technologies to create a responsive and interactive user experience.
+# Seychelles 
 
-##Key Technologies Used
-HTML – Provides the basic structure and semantic elements of the web pages.
+This project utilizes a combination of modern web technologies to create a responsive and interactive user experience that showcases the beauty and culture of Seychelles.
 
-CSS – Used for styling and layout, ensuring the website is visually appealing and mobile-responsive.
+## Technologies Used
+- **HTML** – Provides the basic structure and semantic layout of the web pages.  
+- **CSS** – Handles styling and layout for a visually appealing, mobile-responsive design.  
+- **JavaScript** – Adds interactivity through dynamic content, DOM manipulation, and event handling.  
+- **Responsive Design** – Ensures smooth display across all screen sizes.  
+- **Media Queries** – Enhances mobile friendliness in combination with CSS.
 
-JavaScript – Adds interactivity to the site, including dynamic content, DOM manipulation, and user event handling.
+## Current Features
+- **Interactive Navigation** – Intuitive navigation bar for seamless browsing.   
+- **Content Sections** – Informative content about Seychelles’ culture, beaches, and cuisine.  
+- **Responsive Layout** – Adjusts to all devices, from mobile phones to desktops.  
+- **Smooth Transitions** – CSS animations and transitions for a polished look and feel.
 
-Responsive Design – Ensures the website adapts seamlessly to various screen sizes, from mobile phones to desktops.
+## Planned Features
+> These features are currently under development and will be added soon:
 
-Media Queries – Used with CSS to enhance mobile compatibility.
+- **Apartment Section** – A dedicated area with information on available accommodations, images, amenities, and pricing.  
+- **Contact Information** – A section with contact details and a contact form for inquiries and reservations.
 
-##Features
-Interactive Navigation – Easy-to-use navigation bar for seamless browsing.
 
-Image Gallery – Showcasing stunning images of Seychelles' beaches and natural beauty.
-
-Content Sections – Clear and informative sections about Seychelles' culture, beaches, and cuisine.
-
-Responsive Layout – Fluid design that adapts to all devices.
-
-Smooth Transitions – CSS animations and transitions for a polished, professional look.
-
-##Upcoming Features:
-
-Apartment Section – A dedicated section featuring details about accommodation in Seychelles, including amenities, images, and pricing (coming soon).
-
-Contact Information – A new section with contact details and a contact form for inquiries and bookings (coming soon).
